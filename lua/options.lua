@@ -7,6 +7,8 @@ vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.number = true
+-- Make line number be relative to cursor
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -38,5 +40,6 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
 
 -- vim: ts=2 sts=2 sw=2 et
