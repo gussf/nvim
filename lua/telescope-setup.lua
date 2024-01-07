@@ -11,6 +11,8 @@ require('telescope').setup {
   },
 }
 
+require("telescope").load_extension('harpoon')
+
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
@@ -79,7 +81,8 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
 
 -- custom
-vim.keymap.set("n","<leader>fb", ":Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>", { desc = '[F]ile [B]rowser', noremap = true })
+vim.keymap.set("n", "<leader>fb", ":Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>",
+  { desc = '[F]ile [B]rowser', noremap = true })
 
 
 -- vim: ts=2 sts=2 sw=2 et
