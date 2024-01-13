@@ -11,3 +11,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
   group = format_sync_grp,
 })
+
+vim.keymap.set("n", "<leader>gie", ":GoIfErr <CR>",
+  { desc = '[I]f [E]rr' })
