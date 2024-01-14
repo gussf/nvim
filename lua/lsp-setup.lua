@@ -67,6 +67,7 @@ require('which-key').register({
 require('mason').setup()
 require('mason-lspconfig').setup()
 
+local install_root_dir = vim.fn.stdpath("data") .. "/lsp_servers"
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 --
@@ -78,7 +79,12 @@ require('mason-lspconfig').setup()
 local servers = {
   erlangls = {},
   -- clangd = {},
-  gopls = {},
+  gopls = {
+    gopls_cmd = { install_root_dir .. '/go/gopls' },
+    fillstruct = 'gopls',
+    dap_debug = true,
+    dap_debug_gui = true
+  },
   -- pyright = {},
   rust_analyzer = {},
   -- tsserver = {},
