@@ -78,8 +78,6 @@ require 'trouble-setup'
 
 require 'neotree-setup'
 
-require 'go-setup'
-
 require 'barbar-setup'
 
 -- The line beneath this is called `modeline`. See `:help modeline`

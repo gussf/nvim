@@ -79,13 +79,8 @@ local install_root_dir = vim.fn.stdpath("data") .. "/lsp_servers"
 local servers = {
   erlangls = {},
   -- clangd = {},
-  gopls = {
-    gopls_cmd = { install_root_dir .. '/go/gopls' },
-    fillstruct = 'gopls',
-    dap_debug = true,
-    dap_debug_gui = true
-  },
-  -- pyright = {},
+  gopls = {},
+  -- -- pyright = {},
   rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },

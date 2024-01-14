@@ -35,7 +35,10 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
-
+  {
+    "L3MON4D3/LuaSnip",
+    dependencies = { "rafamadriz/friendly-snippets" },
+  },
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',

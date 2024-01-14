@@ -5,6 +5,8 @@ local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
+vim.keymap.set({ "i" }, "<C-K>", function() luasnip.lsp_expand() end, { silent = true })
+
 cmp.setup {
   snippet = {
     expand = function(args)
